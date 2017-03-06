@@ -1,0 +1,33 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██╗██╗  ██╗
+██║     ██╔════╝██║   ██║██╔════╝██║         ███║██║  ██║
+██║     █████╗  ██║   ██║█████╗  ██║         ╚██║███████║
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║          ██║╚════██║
+███████╗███████╗ ╚████╔╝ ███████╗███████╗     ██║     ██║
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═╝     ╚═╝
+
+
+gdb /bin/getflag
+
+-> 0x0804898e <+72>:	test   %eax,%eax
+
+Set a breakPoint to bypass the ptrace security:
+b *0x0804898e
+
+-> 0x08048b02 <+444>:	mov    %eax,0x18(%esp)
+
+Set another breakPoint to change our UID to 3014 (flag14):
+b *0x08048b02
+
+run
+
+set $eax=0
+
+continue
+
+set $eax=3014
+
+continue
+                                |═════════════════════════════════════════|
+Check flag.Here is your token : | 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ |
+                                |═════════════════════════════════════════|

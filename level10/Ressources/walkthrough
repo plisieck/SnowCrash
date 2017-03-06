@@ -1,0 +1,38 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██╗ ██████╗ 
+██║     ██╔════╝██║   ██║██╔════╝██║         ███║██╔═████╗
+██║     █████╗  ██║   ██║█████╗  ██║         ╚██║██║██╔██║
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║          ██║████╔╝██║
+███████╗███████╗ ╚████╔╝ ███████╗███████╗     ██║╚██████╔╝
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═╝ ╚═════╝ 
+
+
+We have an executable and a token file.
+The executable try to send a file to a server and display its content.
+Once again, we have not the necessary rights on the token file to send it on the server.
+
+Let's use the following exploit:
+http://security.stackexchange.com/questions/42659/how-is-using-acces-opening-a-security-hole
+
+strings level10
+-> Connecting to %s:6969..
+
+Open a shell to listen on this port:
+nc -klv 6969
+
+-k Forces nc to stay listening for another connection after its current connection is completed. It is an error to use this option without the -l option.
+
+We create a script that spam the creation of a file, delete it, then create a symbolic link to exploit the short time between these two operations:
+-> symlink_spammer.sh
+
+We also create a script that spam the connection to the server:
+-> connect.sh
+
+-> woupa2yuojeeaaed06riuj63c
+
+su flag 10
+
+getflag
+                                |═══════════════════════════|
+Check flag.Here is your token : | feulo4b72j7edeahuete3no7c |
+                                |═══════════════════════════|

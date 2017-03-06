@@ -1,0 +1,31 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██████╗  ██████╗ 
+██║     ██╔════╝██║   ██║██╔════╝██║         ██╔═████╗██╔═████╗
+██║     █████╗  ██║   ██║█████╗  ██║         ██║██╔██║██║██╔██║
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║         ████╔╝██║████╔╝██║
+███████╗███████╗ ╚████╔╝ ███████╗███████╗    ╚██████╔╝╚██████╔╝
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═════╝  ╚═════╝ 
+
+
+We display all users:
+cat /etc/passwd
+-> flag00:x:3000:3000::/home/flag/flag00:/bin/bash
+
+We search files who can be executed by user flag00:
+find / -uid 3000
+
+cat /usr/sbin/john
+
+-> cdiiddwpgswtgt
+
+It's an encoded string(rot+15), so we need to decode it:
+http://www.dcode.fr/chiffre-cesar
+
+-> nottoohardhere
+
+su flag00
+
+getflag
+                                |═══════════════════════════|
+Check flag.Here is your token : | x24ti5gi3x0ol2eh4esiuxias |
+                                |═══════════════════════════|

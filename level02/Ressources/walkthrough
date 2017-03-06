@@ -1,0 +1,40 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██████╗ ██████╗ 
+██║     ██╔════╝██║   ██║██╔════╝██║         ██╔═████╗╚════██╗
+██║     █████╗  ██║   ██║█████╗  ██║         ██║██╔██║ █████╔╝
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║         ████╔╝██║██╔═══╝ 
+███████╗███████╗ ╚████╔╝ ███████╗███████╗    ╚██████╔╝███████╗
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═════╝ ╚══════╝
+
+
+Login at www.cloudshark.org:
+Corim1965@teleworm.us / password
+
+Get the pcap file and upload it on the platform:
+scp -P 4242 level02@10.12.1.103:level02.pcap level02.pcap
+chmod u+r level02.pcap
+
+We see "Password:" at #43
+
+Just follow the transmission and check the [Data] field:
+
+-> 66 74 5f 77 61 6e 64 72 7f 7f 7f 4e 44 52 65 6c 7f 4c 30 4c
+
+The 7f is DEL, so delete X previous characters when 7f is pressed X times.
+
+-> 66 74 5f 77 61 4e 44 52 65 4c 30 4c
+
+ ___________________________________________________________
+| 66 | 74 | 5f | 77 | 61 | 4e | 44 | 52 | 65 | 4c | 30 | 4c | 
+|-----------------------------------------------------------|
+|  f    t    _    w    a    N    D    R    e    L    0    L |
+|___________________________________________________________|
+
+-> ft_waNDReL0L
+
+su flag02
+
+getflag
+                                |═══════════════════════════|
+Check flag.Here is your token : | kooda2puivaav1idi4f57q8iq |
+                                |═══════════════════════════|

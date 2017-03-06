@@ -1,0 +1,37 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██████╗  █████╗ 
+██║     ██╔════╝██║   ██║██╔════╝██║         ██╔═████╗██╔══██╗
+██║     █████╗  ██║   ██║█████╗  ██║         ██║██╔██║╚██████║
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║         ████╔╝██║ ╚═══██║
+███████╗███████╗ ╚████╔╝ ███████╗███████╗    ╚██████╔╝ █████╔╝
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═════╝  ╚════╝
+
+cat token
+-> f4kmm6p|=p�n��DB�Du��
+
+The token looks like to be crypted.
+
+./level09 "Hello"
+-> Hfnos
+
+The executable give us the key to decrypt it.
+We just have to increment every char by his position in the string.
+
+ _________________________________________
+ | H(+0) | e(+1) | l(+2) | l(+3) | o(+4) |
+ |---------------------------------------|
+ |   H       f       n       o       s   |
+ |_______________________________________|
+
+Let's make a program to do this.
+-> decrypt.c
+
+/tmp/decrypt ~/token
+-> f3iji1ju5yuevaus41q1afiuq
+
+su flag09
+
+getflag
+                                |═══════════════════════════|
+Check flag.Here is your token : | s5cAJpM8ev6XHw998pRWG728z |
+                                |═══════════════════════════|

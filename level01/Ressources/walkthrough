@@ -1,0 +1,40 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██████╗  ██╗
+██║     ██╔════╝██║   ██║██╔════╝██║         ██╔═████╗███║
+██║     █████╗  ██║   ██║█████╗  ██║         ██║██╔██║╚██║
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║         ████╔╝██║ ██║
+███████╗███████╗ ╚████╔╝ ███████╗███████╗    ╚██████╔╝ ██║
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═════╝  ╚═╝
+                                                        
+
+We display all users:
+cat /etc/passwd
+
+-> flag01:42hDRfypTqqnw
+
+The password is crypted, we will use John the Ripper to crack it:
+
+---------| DOWNLOAD AND INSTALL JOHN THE RIPPER |-----------
+
+Go to:
+http://www.openwall.com/john/j/john-1.8.0.tar.xz
+
+Then execute:
+tar -xf ~/Downloads/john-1.8.0.tar.xz
+cd ~/Downloads/john-1.8.0/src && make macosx-x86-64 
+cd ../run
+
+------------------------------------------------------------
+
+echo "42hDRfypTqqnw" > password
+
+./john password
+
+-> abcdefg
+
+su flag01
+
+getflag
+                                |═══════════════════════════|
+Check flag.Here is your token : | f2av5il02puano7naaf6adaaf |
+                                |═══════════════════════════|

